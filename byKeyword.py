@@ -1,5 +1,12 @@
+import os
 # 導入Discord.py模組
 import discord
+from dotenv import load_dotenv
+
+# 載入 .env 檔案
+load_dotenv()
+
+discord_token_venus = os.getenv("DISCORD_TOKEN_MERCURIUS")
 
 # client是跟discord連接，intents是要求機器人的權限
 intents = discord.Intents.default()
@@ -50,4 +57,4 @@ async def on_message(message):
     if response:
         await message.channel.send(response)
 
-client.run("token")
+client.run(discord_token_venus)
