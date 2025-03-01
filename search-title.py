@@ -63,8 +63,6 @@ class Website_Process():
         return titles
 
 
-
-
 if __name__ == "__main__":
     url = "https://abmedia.io/category/trend/technology-development"  # 替換成你要爬取的網址
     website_process = Website_Process(url)
